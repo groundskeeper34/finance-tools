@@ -31,7 +31,7 @@
 import {utils} from 'ynab';
 
 export default {
-  props: ['scheduled_transactions'],
+  props: ['scheduledTransactions'],
   methods: {
     // Now we can make this method available to our template
     // So we can format this milliunits in the correct currency format
