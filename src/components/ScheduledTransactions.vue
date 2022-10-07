@@ -15,7 +15,7 @@
     <tbody>
       <tr v-for="scheduled_transaction in scheduledTransactions" v-bind:key="scheduled_transaction.id">
         <td>{{scheduled_transaction.account_name}}</td>
-        <td>{{scheduled_transaction.date}}</td>
+        <td>{{scheduled_transaction.date_next}}</td>
         <td>{{scheduled_transaction.payee_name}}</td>
         <td>{{scheduled_transaction.category_name}}</td>
         <td>{{scheduled_transaction.memo}}</td>
