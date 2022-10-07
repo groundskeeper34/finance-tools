@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="scheduled_transaction in scheduled_transactions" v-bind:key="scheduled_transaction.id">
+      <tr v-for="scheduled_transaction in scheduledTransactions" v-bind:key="scheduled_transaction.id">
         <td>{{scheduled_transaction.account_name}}</td>
         <td>{{scheduled_transaction.date}}</td>
         <td>{{scheduled_transaction.payee_name}}</td>

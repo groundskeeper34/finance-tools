@@ -90,7 +90,7 @@ export default {
       budgetId: null,
       budgets: [],
       transactions: [],
-      scheduled_transactions: [],
+      scheduledTransactions: [],
     }
   },
   // When this component is created, check whether we need to get a token,
@@ -124,9 +124,9 @@ export default {
       this.loading = true;
       this.error = null;
       this.budgetId = id;
-      this.scheduled_transactions = [];
+      this.scheduledTransactions = [];
       this.api.scheduledTransactions.getScheduledTransactions(id).then((res) => {
-        this.scheduled_transactions = res.data.scheduledTransactions;
+        this.scheduledTransactions = res.data.scheduledTransactions;
       }).catch((err) => {
         this.error = err.error.detail;
       }).finally(() => {
