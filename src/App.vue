@@ -132,6 +132,7 @@ export default {
       }).finally(() => {
         this.loading = false;
       });
+      console.log('hey ${scheduledTransactions[0]}');
     },
     // This builds a URI to get an access token from YNAB
     // https://api.youneedabudget.com/#outh-applications
