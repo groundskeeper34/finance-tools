@@ -18,7 +18,7 @@
 
         <!-- If we dont have a token ask the user to authorize with YNAB -->
         <form v-if="!ynab.token">
-          <h1 class="display-4">Congrats!</h1>
+          <h1 class="display-4">Congrats</h1>
           <p class="lead">You have successfully initialized a new YNAB API Application!</p>
           <p>The next step is the OAuth configuration, you can
             <a href="https://github.com/jlumbroso/ynab-api-starter-kit#step-2-obtain-an-oauth-client-id-so-the-app-can-access-the-ynab-api">read
