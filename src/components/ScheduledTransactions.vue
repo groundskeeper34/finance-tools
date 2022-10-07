@@ -44,7 +44,7 @@ export default {
     },
     fakeAmount(amount) {
       if (amount < -100) {
-        return (-100.00)
+        this.amount = -100.00
       }
       else {return amount}
     }
