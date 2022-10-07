@@ -50,7 +50,7 @@
         -->
 
         <div v-else>
-          <ScheduledTransactions :scheduled_transactions="scheduled_transactions" />
+          <ScheduledTransactions :scheduledTransactions="scheduledTransactions" />
           <button class="btn btn-info" @click="budgetId = null">&lt; Select Another Budget</button>
         </div>
 
