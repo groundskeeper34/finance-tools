@@ -40,7 +40,7 @@
         </form>
 
         <!-- Otherwise if we have a token, show the budget select -->
-        <Budgets v-else-if="!budgetId" :budgets="budgets" :selectBudget="selectBudget" />
+        <Budgets v-else-if="!budgetId" :budgets="budgets" :selectBudget="selectType" />
 
         <!-- If a budget has been selected, display transactions from that budget 
         <div v-else>
@@ -74,6 +74,7 @@ import Footer from './components/Footer.vue';
 import Budgets from './components/Budgets.vue';
 import Transactions from './components/Transactions.vue';
 import ScheduledTransactions from './components/ScheduledTransactions.vue';
+import ChooseTransactionTypeVue from './components/ChooseTransactionType.vue';
 
 export default {
   // The data to feed our templates
@@ -91,6 +92,7 @@ export default {
       budgets: [],
       transactions: [],
       scheduledTransactions: [],
+      transactionTypes,
     }
   },
   // When this component is created, check whether we need to get a token,
@@ -133,6 +135,9 @@ export default {
         this.loading = false;
       });
     },
+    selectType() {
+      this.transactionTypes = ['ScheduledTransactions', 'Transactions'];
+    },
     // This builds a URI to get an access token from YNAB
     // https://api.youneedabudget.com/#outh-applications
     authorizeWithYNAB(e) {
@@ -172,7 +177,8 @@ export default {
     Footer,
     Budgets,
     Transactions,
-    ScheduledTransactions
+    ScheduledTransactions,
+    ChooseTransactionType
   }
 }
 </script>
