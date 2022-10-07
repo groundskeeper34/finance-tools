@@ -125,8 +125,8 @@ export default {
       this.error = null;
       this.budgetId = id;
       this.scheduledTransactions = [];
-      this.api.scheduledTransactions.getScheduledTransactions(id).then((res) => {
-        this.scheduledTransactions = res.data.scheduledTransactions;
+      this.api.scheduledTransactions.getScheduledTransactions(id).then((res) => { //budget.id = fc313aa0-e155-4c54-9e63-bbeeddca4e6d
+        this.scheduledTransactions = res.data.scheduled_transactions;
       }).catch((err) => {
         this.error = err.error.detail;
       }).finally(() => {
