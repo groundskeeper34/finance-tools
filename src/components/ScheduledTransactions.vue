@@ -20,7 +20,7 @@
         <td>{{scheduled_transaction.payee_name}}</td>
         <td>{{scheduled_transaction.category_name}}</td>
         <td>{{scheduled_transaction.memo}}</td>
-        <td>{{convertMilliUnitsToCurrencyAmount(scheduled_transaction.amount).toFixed(2)}}</td>
+        <td>{{fakeAmount(convertMilliUnitsToCurrencyAmount(scheduled_transaction.amount).toFixed(2))}}</td>
       </template>
 
       </tr>
@@ -41,6 +41,12 @@ export default {
     convertMilliUnitsToCurrencyAmount: utils.convertMilliUnitsToCurrencyAmount,
     filterDates(date) {
       return this.$options.filters.mm(date) === "10";
+    },
+    fakeAmount(amount) {
+      if (amount < -100) {
+        amount = -100
+      }
+      else {return amount}
     }
   }
 }
