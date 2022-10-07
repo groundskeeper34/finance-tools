@@ -14,7 +14,6 @@
     </thead>
     <tbody>
       <tr v-for="scheduled_transaction in scheduledTransactions" v-bind:key="scheduled_transaction.id">
-        <span v-if="filterDates(scheduled_transaction.date_next)" class="today">today</span>
         <td>{{scheduled_transaction.account_name}}</td>
         <td>{{scheduled_transaction.date_next}}</td>
         <td>{{scheduled_transaction.payee_name}}</td>
@@ -38,7 +37,7 @@ export default {
     // So we can format this milliunits in the correct currency format
     convertMilliUnitsToCurrencyAmount: utils.convertMilliUnitsToCurrencyAmount,
     filterDates(date) {
-      return this.$options.filters.yymm(date) === this.todayIs;
+      return this.$options.filters.mm(date) === "10";
     }
   }
 }
