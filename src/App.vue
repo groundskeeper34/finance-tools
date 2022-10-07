@@ -42,9 +42,15 @@
         <!-- Otherwise if we have a token, show the budget select -->
         <Budgets v-else-if="!budgetId" :budgets="budgets" :selectBudget="selectBudget" />
 
-        <!-- If a budget has been selected, display transactions from that budget -->
+        <!-- If a budget has been selected, display transactions from that budget 
         <div v-else>
           <Transactions :transactions="transactions" />
+          <button class="btn btn-info" @click="budgetId = null">&lt; Select Another Budget</button>
+        </div>
+        -->
+
+        <div v-else>
+          <ScheduledTransactions :scheduled_transactions="scheduled_transactions" />
           <button class="btn btn-info" @click="budgetId = null">&lt; Select Another Budget</button>
         </div>
 
@@ -67,6 +73,7 @@ import Nav from './components/Nav.vue';
 import Footer from './components/Footer.vue';
 import Budgets from './components/Budgets.vue';
 import Transactions from './components/Transactions.vue';
+import ScheduledTransactions from './components/ScheduledTransactions.vue';
 
 export default {
   // The data to feed our templates
@@ -163,7 +170,8 @@ export default {
     Nav,
     Footer,
     Budgets,
-    Transactions
+    Transactions,
+    ScheduledTransactions
   }
 }
 </script>
