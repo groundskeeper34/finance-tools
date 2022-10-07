@@ -14,6 +14,7 @@
     </thead>
     <tbody>
       <tr v-for="scheduled_transaction in scheduledTransactions" v-bind:key="scheduled_transaction.id">
+        <template v-if="scheduled_transaction.date_next == '2022-11-01'">Filtered for Nov 1</template>
         <td>{{scheduled_transaction.account_name}}</td>
         <td>{{scheduled_transaction.date_next}}</td>
         <td>{{scheduled_transaction.payee_name}}</td>
