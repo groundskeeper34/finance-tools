@@ -14,7 +14,7 @@
     </thead>
     <tbody>
       <tr v-for="scheduled_transaction in scheduledTransactions" v-bind:key="scheduled_transaction.id">
-        <template v-if="scheduled_transaction.date_next == '2022-11-01'">
+        <template v-if="scheduled_transaction.date_next <= '2022-11-01'">
         <td>{{scheduled_transaction.account_name}}</td>
         <td>{{scheduled_transaction.date_next}}</td>
         <td>{{scheduled_transaction.payee_name}}</td>
@@ -22,7 +22,7 @@
         <td>{{scheduled_transaction.memo}}</td>
         <td>{{convertMilliUnitsToCurrencyAmount(scheduled_transaction.amount).toFixed(2)}}</td>
       </template>
-      
+
       </tr>
     </tbody>
     </table>
