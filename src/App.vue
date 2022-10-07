@@ -40,7 +40,7 @@
         </form>
 
         <!-- Otherwise if we have a token, show the budget select -->
-        <Budgets v-else-if="!budgetId" :budgets="budgets" :selectBudget="selectType" />
+        <Budgets v-else-if="!budgetId" :budgets="budgets" :selectType="selectType" />
 
         <!-- If a budget has been selected, display transactions from that budget 
         <div v-else>
