@@ -2,7 +2,7 @@
 # https://dev.to/achukka/deploy-react-app-using-github-actions-157d
 # https://github.com/jlumbroso/hugo-geekdoc-github-example/blob/47d86ed41e1678c13b17c44a71140563c8882f3c/.github/workflows/gh-pages.yaml
 
-name: Deploy YNAB Application to GitHub Pages
+name: Deploy Finance Tool Application to GitHub Pages
 
 # Controls when the action will run.
 on:
